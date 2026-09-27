@@ -1,0 +1,201 @@
+[gd_scene format=3 uid="uid://bhlc7w4sua2qk"]
+
+[ext_resource type="Script" uid="uid://cfmh8u88wjcwl" path="res://main.gd" id="1_getpj"]
+[ext_resource type="Texture2D" uid="uid://gklk7qc0b7ut" path="res://dirt.png" id="1_ig7tw"]
+[ext_resource type="Texture2D" uid="uid://bvfgm3m1y0cb0" path="res://grass.png" id="2_0xm2m"]
+[ext_resource type="Script" uid="uid://d2csseee4fm4g" path="res://GroundGenerator.gd" id="3_1bvp3"]
+[ext_resource type="Texture2D" uid="uid://b34p7h0vcpbvj" path="res://water.png" id="5_272bh"]
+[ext_resource type="Script" uid="uid://dp7o04ihdchss" path="res://OreGenerator.gd" id="5_lquwl"]
+[ext_resource type="Texture2D" uid="uid://dsa8la3mqmir8" path="res://bone.png" id="6_5vw27"]
+[ext_resource type="Texture2D" uid="uid://nvvdgksinu5l" path="res://roots/A2.png" id="6_yaehf"]
+[ext_resource type="Texture2D" uid="uid://b0ka6cm55k7xj" path="res://roots/B1.png" id="7_074og"]
+[ext_resource type="Texture2D" uid="uid://cpkctw82edbhh" path="res://tree.png" id="7_kek77"]
+[ext_resource type="Script" uid="uid://buwd6123unflu" path="res://RootPlacer.gd" id="8_4c57u"]
+[ext_resource type="Texture2D" uid="uid://bj1cw5qgk4fhr" path="res://roots/C1.png" id="8_cegan"]
+[ext_resource type="Texture2D" uid="uid://cgwndux1yh1qn" path="res://roots/C2.png" id="9_82xsv"]
+[ext_resource type="Texture2D" uid="uid://bhuyqn3vjaprq" path="res://roots/A1.png" id="10_4c57u"]
+[ext_resource type="Texture2D" uid="uid://bwjgavv1ffabu" path="res://roots/C3.png" id="10_getpj"]
+[ext_resource type="Texture2D" uid="uid://d0gpllxphcik8" path="res://roots/D2.png" id="11_ryguw"]
+[ext_resource type="Texture2D" uid="uid://3m7h53coos3d" path="res://roots/D1.png" id="12_d13ii"]
+[ext_resource type="Texture2D" uid="uid://die6umk5r0fvg" path="res://gui-Sheet.png" id="18_074og"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0xm2m"]
+texture = ExtResource("1_ig7tw")
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_h2yge"]
+texture = ExtResource("2_0xm2m")
+0:0/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_bais7"]
+sources/0 = SubResource("TileSetAtlasSource_0xm2m")
+sources/1 = SubResource("TileSetAtlasSource_h2yge")
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_efxa6"]
+texture = ExtResource("7_kek77")
+1:0/0 = 0
+2:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4c57u"]
+texture = ExtResource("10_4c57u")
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_1u8w0"]
+texture = ExtResource("6_yaehf")
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0odxb"]
+texture = ExtResource("7_074og")
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_lswn8"]
+texture = ExtResource("8_cegan")
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_a6jrf"]
+texture = ExtResource("9_82xsv")
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_xuqvo"]
+texture = ExtResource("10_getpj")
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_qsp4k"]
+texture = ExtResource("11_ryguw")
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_kq58d"]
+texture = ExtResource("12_d13ii")
+0:0/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_272bh"]
+sources/0 = SubResource("TileSetAtlasSource_efxa6")
+sources/2 = SubResource("TileSetAtlasSource_4c57u")
+sources/3 = SubResource("TileSetAtlasSource_1u8w0")
+sources/4 = SubResource("TileSetAtlasSource_0odxb")
+sources/5 = SubResource("TileSetAtlasSource_lswn8")
+sources/6 = SubResource("TileSetAtlasSource_a6jrf")
+sources/7 = SubResource("TileSetAtlasSource_xuqvo")
+sources/8 = SubResource("TileSetAtlasSource_qsp4k")
+sources/9 = SubResource("TileSetAtlasSource_kq58d")
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_272bh"]
+texture = ExtResource("5_272bh")
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_5vw27"]
+texture = ExtResource("6_5vw27")
+0:0/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_lquwl"]
+sources/0 = SubResource("TileSetAtlasSource_272bh")
+sources/1 = SubResource("TileSetAtlasSource_5vw27")
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cegan"]
+atlas = ExtResource("18_074og")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_82xsv"]
+atlas = ExtResource("18_074og")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_getpj"]
+atlas = ExtResource("18_074og")
+region = Rect2(128, 0, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_bais7"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cegan")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_82xsv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_getpj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_82xsv")
+}],
+"loop": 0,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Node2D" type="Node2D" unique_id=1630546058]
+script = ExtResource("1_getpj")
+
+[node name="Ground" type="TileMapLayer" parent="." unique_id=1810653494]
+position = Vector2(0, 256)
+scale = Vector2(4, 4)
+tile_set = SubResource("TileSet_bais7")
+script = ExtResource("3_1bvp3")
+
+[node name="Roots" type="TileMapLayer" parent="." unique_id=1802771229]
+z_index = 2
+position = Vector2(0, 256)
+scale = Vector2(4, 4)
+tile_set = SubResource("TileSet_272bh")
+script = ExtResource("8_4c57u")
+
+[node name="Minerals" type="TileMapLayer" parent="." unique_id=886777391]
+z_index = 1
+position = Vector2(0, 256)
+scale = Vector2(4, 4)
+tile_set = SubResource("TileSet_lquwl")
+script = ExtResource("5_lquwl")
+
+[node name="Camera" type="Camera2D" parent="." unique_id=1010830473]
+scale = Vector2(4, 4)
+offset = Vector2(575, 325)
+position_smoothing_enabled = true
+
+[node name="Selected" type="Sprite2D" parent="." unique_id=384085979]
+modulate = Color(1, 1, 1, 0.6745098)
+z_index = 5
+position = Vector2(-52, -121)
+scale = Vector2(4, 4)
+texture = ExtResource("10_4c57u")
+
+[node name="Control" type="Control" parent="." unique_id=1878741103]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 156.0
+offset_bottom = 123.0
+
+[node name="SelTwo" type="Button" parent="Control" unique_id=757213805]
+z_index = 5
+layout_mode = 0
+offset_left = 580.0
+offset_top = 11.0
+offset_right = 620.0
+offset_bottom = 51.0
+icon = ExtResource("10_4c57u")
+icon_alignment = 1
+expand_icon = true
+
+[node name="SelOne" type="Button" parent="Control" unique_id=798713985]
+z_index = 5
+layout_mode = 0
+offset_left = 535.0
+offset_top = 11.0
+offset_right = 575.0
+offset_bottom = 51.0
+icon = ExtResource("10_4c57u")
+icon_alignment = 1
+expand_icon = true
+
+[node name="Tree" type="AnimatedSprite2D" parent="." unique_id=692470926]
+position = Vector2(576, 64)
+scale = Vector2(4, 4)
+sprite_frames = SubResource("SpriteFrames_bais7")
+frame = 2
+frame_progress = 0.7759103
+
+[connection signal="pressed" from="Control/SelTwo" to="Roots" method="_on_sel_two_pressed"]
+[connection signal="pressed" from="Control/SelOne" to="Roots" method="_on_sel_one_pressed"]
