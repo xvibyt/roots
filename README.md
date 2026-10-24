@@ -10,6 +10,6 @@ Controls:
   The depth-level is infinitely generated downwards, to get down you have to scroll.
 
 I didn't have enough time to finish the game completely, so it has only very basic gameplay. The water and bone tiles you can see were supposed to be used for being able to place more roots, but that didn't make it before the deadline unfortunately.
-I also created a lot of assets for things like animals, which would move on top of the grass, but I couldn't bring their movement logic to work so I had to scrap them.
+I also created a lot of animated assets mostly for like animals, which would move on top of the grass, but I couldn't get their movement logic to work so I had to scrap them.
 
 I didn't use any AI.
